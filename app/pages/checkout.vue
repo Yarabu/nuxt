@@ -18,7 +18,7 @@
         Set up your account to gain instant access! You won't be charged if you decide to cancel within 3 days
       </p>
 
-      <div v-else-if="data" class="flex flex-col md:flex-row gap-8">
+      <div v-if="data" class="flex flex-col md:flex-row gap-8">
 
         <div class="w-full md:w-[40%]">
           <div class="bg-white rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.1)] border border-gray-100 relative overflow-hidden flex flex-col">
@@ -143,8 +143,7 @@
                 type="submit"
                 :disabled="!form.consent"
                 :class="form.consent ? 'bg-[#333333] text-white hover:bg-black' : 'bg-[#E5E7EB] text-gray-400 cursor-not-allowed'"
-                class="px-8 py-2.5 rounded font-bold text-sm transition-colors cursor-pointer"
-              >
+                class="px-8 py-2.5 rounded font-bold text-sm transition-colors cursor-pointer">
                 Try It Free
               </button>
 
@@ -166,9 +165,10 @@ useHead({
   link: [{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' }]
 })
 
-const route = useRoute()
+const subscriptionStore = useSubscriptionStore()
+
 const { data, pending } = await useFetch('/api/checkout', {
-  query: { plan: route.query.plan }
+  query: { plan: subscriptionStore.planName }
 })
 
 const date = new Date()
