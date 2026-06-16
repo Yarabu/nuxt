@@ -26,12 +26,14 @@
       </div>
 
       <div class="mt-8 pt-4 border-t">
-        <a
-          href="/BlogPostsUi"
-          class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+        <UButton
+          to="/posts"
+          color="neutral"
+          variant="outline"
+          icon="i-lucide-arrow-left"
         >
-          &larr; Повернутися до списку
-        </a>
+          Повернутися
+        </UButton>
       </div>
     </div>
   </div>

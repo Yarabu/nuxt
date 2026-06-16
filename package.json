@@ -13,12 +13,14 @@
   "dependencies": {
     "@iconify-json/lucide": "^1.2.98",
     "@iconify-json/simple-icons": "^1.2.74",
-    "@nuxt/ui": "^4.5.1",
+    "@nuxt/ui": "^4.8.2",
     "@pinia/nuxt": "^0.11.3",
+    "@tanstack/vue-table": "^8.21.3",
     "@vueuse/nuxt": "^14.2.1",
-    "nuxt": "^4.4.2",
+    "nuxt": "^4.4.8",
     "pinia": "^3.0.4",
-    "tailwindcss": "^4.2.1"
+    "tailwindcss": "^4.2.1",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
